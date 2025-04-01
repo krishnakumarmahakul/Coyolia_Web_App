@@ -1,0 +1,25 @@
+.knobContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Rotating Wrapper */
+.knobWrapper {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  transition: transform 0.2s ease-out;
+}
+
+/* Custom Knob Image */
+.knobImage {
+  width: 100px;
+  height: 100px;
+  background: url("../../assets/cropped_image.png") no-repeat center;
+  background-size: contain;
+}
+
+/* Green Pointer (already inside the image) will rotate */

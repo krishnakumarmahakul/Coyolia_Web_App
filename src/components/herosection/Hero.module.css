@@ -1,0 +1,35 @@
+.gridcontainer {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
+    min-height: 80vh;
+}
+
+.maincontent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4vw;
+    min-height: 70vh;
+
+}
+
+.footer {
+    background-color: #00171f;
+    min-height: 30vh;
+    color: #edf2f4;
+    text-align: center;
+    padding: 2vw;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        padding: 6vw;
+    }
+
+    .footer {
+        padding: 3vw;
+        font-size: 0.9rem;
+    }
+}
