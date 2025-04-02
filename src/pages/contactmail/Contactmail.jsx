@@ -28,7 +28,7 @@ function Contactmail() {
   return (
      <div className={styles.container}>
         <h1 className={styles.title}>Coyolia </h1>
-        <h1 className={styles.title}>Technologies </h1>
+        <h1 className={styles.title}>Technology </h1>
         <div className={styles.formcontainer}>
 
         

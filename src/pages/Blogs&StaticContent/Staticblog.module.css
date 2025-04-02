@@ -14,7 +14,7 @@
   
   .badge {
     background-color: #ffbf00;
-    color: black;
+    color: #21204c;
     margin-left: 10%;
     font-size: 24px;
     font-weight: bold;
@@ -28,7 +28,7 @@
   .text {
     margin-top: 15px;
     font-size: 18px;
-    color: #333;
+    color: #21204c;
     max-width: 70%;
     margin-left: 10%;
     text-align: left;

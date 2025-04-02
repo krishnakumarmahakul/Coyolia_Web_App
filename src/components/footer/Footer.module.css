@@ -2,7 +2,7 @@
 
 .footer {
     background-color: #f8f9fa;
-    color: #6c757d;
+    color: #21204c;
     text-align: center;
     padding: 20px 0;
 }
@@ -26,14 +26,14 @@
 }
 
 .icon {
-    color: #6c757d;
+    color: #21204c;
     text-decoration: none;
     font-size: 20px;
     transition: color 0.3s;
 }
 
 .icon:hover {
-    color: #000;
+    color: #21204c;
 }
 
 .footerContent {
@@ -53,19 +53,19 @@
 .footerColumn h6 {
     font-weight: bold;
     margin-bottom: 10px;
-    color: #343a40;
+    color: #21204c;
 }
 
 .footerColumn a {
     display: block;
-    color: #6c757d;
+    color: #21204c;
     text-decoration: none;
     margin: 5px 0;
     transition: color 0.3s;
 }
 
 .footerColumn a:hover {
-    color: #000;
+    color: #21204c;
 }
 
 .footerBottom {

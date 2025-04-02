@@ -5,6 +5,7 @@ import Header from "../header/Header";
 import Footer from "../footer/Footer";
 import Staticblog from "../../pages/Blogs&StaticContent/Staticblog";
 import Contactmail from "../../pages/contactmail/contactmail";
+import Skillcontact from "../../pages/skillcontact/skillcontact";
 
 
 const Hero = () => {
@@ -16,6 +17,7 @@ const Hero = () => {
       </main>
       <Staticblog />
       <Contactmail/>
+      <Skillcontact/>
       <Footer />
     </div>
   );

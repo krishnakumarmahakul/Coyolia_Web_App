@@ -18,7 +18,7 @@ const Footer = () => {
             
             <section className={styles.footerContent}>
                 <div className={styles.footerColumn}>
-                    <h6><i className="fas fa-gem"></i> Company Name</h6>
+                    <h6><i className="fas fa-gem"></i> Coyolia pvt. ltm</h6>
                     <p>Here you can use rows and columns to organize your footer content.</p>
                 </div>
                 <div className={styles.footerColumn}>

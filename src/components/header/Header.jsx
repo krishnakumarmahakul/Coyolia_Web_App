@@ -10,9 +10,9 @@ const Header = () => {
         <img src={coyolia_img} alt="Coyolia Logo" />
       </div>
 
-      <div className={styles.knobWrapper}>
+      {/* <div className={styles.knobWrapper}>
         <VolumeKnob />
-      </div>
+      </div> */}
 
       <nav className={styles.nav}>
         <ul className={styles.navList}>
