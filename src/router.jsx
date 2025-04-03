@@ -6,6 +6,9 @@ import AmbarGlow from "./pages/ambarglow/Ambarglow";
 import Important from "./pages/important/Important";
 import Contact from "./pages/contactus/ContactUs";
 import Hero from "./components/herosection/Hero";
+import Privacypolicy from "./pages/important/privacy Policy/Privacypolicy";
+import Refund from "./pages/important/refundPolicy/Refund";
+import Termcondition from "./pages/important/term & condition/Termcondition";
 
 const PageRouter = () => {
   return (
@@ -16,7 +19,11 @@ const PageRouter = () => {
         <Route path="about" element={<About />} />
         <Route path="services" element={<Services />} />
         <Route path="ambarglow" element={<AmbarGlow />} />
-        <Route path="important" element={<Important />} />
+        <Route path="important" element={<Important />}>
+          <Route path="privacypolicy" element={<Privacypolicy/>} />
+          <Route path="refund" element={<Refund/>} />
+          <Route path="termcondition" element={<Termcondition/>} />
+        </Route>
         <Route path="contact" element={<Contact />} />
       </Route>
     </Routes>

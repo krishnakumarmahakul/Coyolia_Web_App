@@ -2,17 +2,26 @@
     display: grid;
     grid-template-rows: auto 1fr auto;
     grid-template-columns: 1fr;
-    min-height: 80vh;
+    min-height: 100vh;
+}
+
+.contentWrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 200px); /* Adjust based on your header/footer height */
 }
 
 .maincontent {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    flex: 1;
     padding: 4vw;
-    min-height: 70vh;
+}
+.pageContent{
+ padding: 1%;
+ height: 95vh;
+
 
 }
+/* Keep your existing footer and media queries */
 
 .footer {
     background-color: #00171f;

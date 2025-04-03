@@ -1,0 +1,139 @@
+.content {
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+    justify-content: space-around;
+    width: 100%; 
+    margin: 0 auto; 
+    box-sizing: border-box;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+     rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+     rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px,
+     rgba(0, 0, 0, 0.09) 0px -3px 5px;
+     background-color: #21204c;
+     border-radius: 3px;
+}
+
+.title {
+    width: 100%;
+    max-width: 45%;
+    padding: 1rem;
+    box-sizing: border-box;
+    
+
+}
+
+.title h2 {
+    text-align: center;
+    font-weight: 200;
+    font-size: 48px;
+    font-weight: 400;
+    margin-bottom: 1rem; 
+    color:#b8b8c5;
+    
+}
+.title p{
+    font-size: 20px;
+    color: #b8b8c5;
+    margin-left: 5%;
+}
+
+.forms {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 45%;
+    padding: 1rem; 
+    box-sizing: border-box;
+    
+}
+
+.forms form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    padding: 2rem; /* Reduced padding from 2.5rem */
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 10px 30px rgba(33, 32, 76, 0.1);
+}
+
+/* Rest of your existing form styles remain the same */
+.forms label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #21204c;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.forms input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #e0e0e6;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    background-color: #f9f9fb;
+}
+
+.forms input:focus {
+    outline: none;
+    border-color: #21204c;
+    box-shadow: 0 0 0 3px rgba(33, 32, 76, 0.1);
+    background-color: white;
+}
+
+.forms input:hover {
+    border-color: #b8b8c5;
+}
+
+.forms button[type="submit"] {
+    background-color: #21204c;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.forms button[type="submit"]:hover {
+    background-color: #19183a;
+    transform: translateY(-2px);
+}
+
+.forms button[type="submit"]:active {
+    transform: translateY(0);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.forms form {
+    animation: fadeIn 0.6s ease forwards;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+    
+    .title, .forms {
+        max-width: 100%;
+    }
+    
+    .title {
+        margin-bottom: 2rem;
+    }
+}

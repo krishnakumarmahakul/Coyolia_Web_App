@@ -6,18 +6,26 @@ import Footer from "../footer/Footer";
 import Staticblog from "../../pages/Blogs&StaticContent/Staticblog";
 import Contactmail from "../../pages/contactmail/contactmail";
 import Skillcontact from "../../pages/skillcontact/skillcontact";
-
+import Testimonies from "../../pages/testimonies/Testimonies";
+import Front from "../../pages/front/Front";
 
 const Hero = () => {
   return (
     <div className={styles.gridcontainer}>
       <Header />
-      <main className={styles.maincontent}>
-        <Outlet />
-      </main>
+      
+      {/* This wrapper will contain both Front and Outlet content */}
+      <div className={styles.contentArea}>
+        <Front />
+        <div className={styles.pageContent}>
+          <Outlet /> {/* This will render the route components below Front */}
+        </div>
+      </div>
+      
       <Staticblog />
-      <Contactmail/>
-      <Skillcontact/>
+      <Contactmail />
+      <Skillcontact />
+      <Testimonies />
       <Footer />
     </div>
   );
