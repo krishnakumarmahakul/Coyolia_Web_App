@@ -37,7 +37,7 @@ const Header = () => {
 
       <nav className={styles.nav}>
         <ul className={styles.navList}>
-          <li>
+          <li className={styles.navItem}>
             <NavLink 
               to="/about" 
               className={({ isActive }) => isActive ? styles.active : styles.navLink}
@@ -45,8 +45,28 @@ const Header = () => {
             >
               About Us
             </NavLink>
+            <div className={styles.dropdown}>
+              <Link 
+                to="/about/ourteam" 
+                onClick={() => handleNavigation("/about/ourteam")}
+              >
+                Our Team 
+              </Link>
+              <Link 
+                to="/about/ourculture" 
+                onClick={() => handleNavigation("/about/ourculture")}
+              >
+                Our Culture
+              </Link>
+              <Link 
+                to="/about/leadership" 
+                onClick={() => handleNavigation("/about/leadership")}
+              >
+                Leadership Principle 
+              </Link>
+            </div>
           </li>
-          <li>
+          <li className={styles.navItem}>
             <NavLink 
               to="/services" 
               className={({ isActive }) => isActive ? styles.active : styles.navLink}
@@ -54,6 +74,14 @@ const Header = () => {
             >
               Services
             </NavLink>
+            <div className={styles.dropdown}>
+              <Link 
+                to="/services/careercouncelling" 
+                onClick={() => handleNavigation("/services/careercouncelling")}
+              >
+                Career Councelling
+              </Link>
+              </div>
           </li>
           <li>
             <NavLink 
@@ -101,6 +129,96 @@ const Header = () => {
             >
               Contact Us
             </NavLink>
+          </li>
+          {/* this is for the solution */}
+          <li className={styles.navItem}>
+            <NavLink 
+              to="/about" 
+              className={({ isActive }) => isActive ? styles.active : styles.navLink}
+              onClick={() => handleNavigation("/about")}
+            >
+              Solutions
+            </NavLink>
+            <div className={styles.dropdown}>
+              <Link 
+                to="/important/privacypolicy" 
+                onClick={() => handleNavigation("/important/privacypolicy")}
+              >
+                Ai Learning & Developments 
+              </Link>
+              <Link 
+                to="/important/termcondition" 
+                onClick={() => handleNavigation("/important/termcondition")}
+              >
+                Ai in talent acquision and hr
+              </Link>
+              <Link 
+                to="/important/refund" 
+                onClick={() => handleNavigation("/important/refund")}
+              >
+                Innovations and research  
+              </Link>
+            </div>
+          </li>
+          {/* this is for the clients */}
+          <li className={styles.navItem}>
+            <NavLink 
+              to="/about" 
+              className={({ isActive }) => isActive ? styles.active : styles.navLink}
+              onClick={() => handleNavigation("/about")}
+            >
+              Clients 
+            </NavLink>
+            <div className={styles.dropdown}>
+              <Link 
+                to="/important/privacypolicy" 
+                onClick={() => handleNavigation("/important/privacypolicy")}
+              >
+                Technology Patner 
+              </Link>
+              <Link 
+                to="/important/termcondition" 
+                onClick={() => handleNavigation("/important/termcondition")}
+              >
+                Academic Patner 
+              </Link>
+              <Link 
+                to="/important/refund" 
+                onClick={() => handleNavigation("/important/refund")}
+              >
+                Resellers 
+              </Link>
+            </div>
+          </li>
+          {/* this is for the in sights section */}
+          <li className={styles.navItem}>
+            <NavLink 
+              to="/about" 
+              className={({ isActive }) => isActive ? styles.active : styles.navLink}
+              onClick={() => handleNavigation("/about")}
+            >
+              Insights
+            </NavLink>
+            <div className={styles.dropdown}>
+              <Link 
+                to="/important/privacypolicy" 
+                onClick={() => handleNavigation("/important/privacypolicy")}
+              >
+                Edtech 
+              </Link>
+              <Link 
+                to="/important/termcondition" 
+                onClick={() => handleNavigation("/important/termcondition")}
+              >
+                Retail
+              </Link>
+              <Link 
+                to="/important/refund" 
+                onClick={() => handleNavigation("/important/refund")}
+              >
+                Banking Service 
+              </Link>
+            </div>
           </li>
         </ul>
       </nav>

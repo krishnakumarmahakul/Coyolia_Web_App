@@ -1,7 +1,11 @@
 import React from 'react';
 import styles from './Services.module.css';
+import { Outlet, useLocation } from 'react-router-dom';
 
 const Services = () => {
+  const location = useLocation();
+  const isBaseRoute = location.pathname === '/services';
+  
   const services = [
     {
       title: "Skill Development and Courses",
@@ -19,15 +23,22 @@ const Services = () => {
 
   return (
     <div className={styles.servicesContainer}>
-      <h2 className={styles.sectionTitle}>Our Services</h2>
-      <div className={styles.servicesGrid}>
-        {services.map((service, index) => (
-          <div key={index} className={styles.serviceCard}>
-            <h3 className={styles.serviceTitle}>{service.title}</h3>
-            <p className={styles.serviceDescription}>{service.description}</p>
+      {isBaseRoute && (
+        <>
+          <h2 className={styles.sectionTitle}>Our Services</h2>
+          <div className={styles.servicesGrid}>
+            {services.map((service, index) => (
+              <div key={index} className={styles.serviceCard}>
+                <h3 className={styles.serviceTitle}>{service.title}</h3>
+                <p className={styles.serviceDescription}>{service.description}</p>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
+        </>
+      )}
+      
+      {/* This will render nested route content if any exists */}
+      <Outlet />
     </div>
   );
 };
