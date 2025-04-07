@@ -13,13 +13,18 @@ import Leadership from "./pages/aboutus/LeadershipPrinciple/Leadership"
 import Ourculture from "./pages/aboutus/OurCulture/Ourculture"
 import Ourteam from "./pages/aboutus/OurTeam/Ourteam"
 import Careercouncelling from './pages/services/Career Counceling/Careercouncelling'
+import Solution from "./pages/Solutions/Solution";
+import Ailearning from './pages/Solutions/Ai Learning & Development/Ailearning'
+import Aitalent from './pages/Solutions/Ai talent acquisition & hr/Aitalent'
+import Innovation from './pages/Solutions/Innovation and research/Innovation'
+
 const PageRouter = () => {
   return (
     <Routes>
       <Route path="/app" element={<App />} />
       <Route path="/" element={<Hero />}>
-        <Route index element={<About />} />
         {/* this is the about us */}
+        <Route index element={<About />} />
         <Route path="about" element={<About />} >
           <Route path="leadership" element={<Leadership/>} />
           <Route path="ourculture" element={<Ourculture/>} />
@@ -38,6 +43,13 @@ const PageRouter = () => {
         </Route>
         {/* this is the contact us */}
         <Route path="contact" element={<Contact />} />
+        {/* this is the solution part */}
+        
+        <Route path="solution" element={<Solution/>}>
+          <Route path="ailearning" element={<Ailearning/>}/>
+          <Route path="aitalent" element={<Aitalent/>}/>
+          <Route path="innovation" element={<Innovation/>}/>
+        </Route>
       </Route>
     </Routes>
   );

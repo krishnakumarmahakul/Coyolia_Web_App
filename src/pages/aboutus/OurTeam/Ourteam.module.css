@@ -1,0 +1,87 @@
+.teamContainer {
+    padding: 3rem 2rem;
+    height: 90vh;
+    /* Add this for main container scroll */
+    overflow-y: auto;
+  }
+  
+  .teamGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* Prevent grid from overflowing container */
+    max-height: 100%;
+  }
+  
+  .memberCard {
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    /* Add scroll for card content if needed */
+    max-height: 400px;
+    overflow-y: auto;
+  }
+  
+  /* Keep all your existing styles below exactly as they are */
+  .header {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .subheader {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .memberCard:hover {
+    transform: translateY(-5px);
+  }
+  
+  .role {
+    font-style: italic;
+    margin: 0.5rem 0;
+  }
+  
+  .bio {
+    margin: 1rem 0 1.5rem;
+    line-height: 1.6;
+  }
+  
+  .expertiseTag {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+  }
+  /* Hide scrollbar for Chrome, Safari, Opera */
+.teamContainer::-webkit-scrollbar,
+.memberCard::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge, Firefox */
+.teamContainer,
+.memberCard {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Keep all your existing styles below exactly as they are */
+.teamContainer {
+  padding: 3rem 2rem;
+  height: 90vh;
+  overflow-y: auto; /* Keep this for functionality */
+}
+
+.memberCard {
+  max-height: 400px;
+  overflow-y: auto; /* Keep this for functionality */
+}

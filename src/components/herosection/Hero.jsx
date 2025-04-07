@@ -5,7 +5,7 @@ import Header from "../header/Header";
 import Footer from "../footer/Footer";
 import Staticblog from "../../pages/Blogs&StaticContent/Staticblog";
 import Contactmail from "../../pages/contactmail/contactmail";
-import Skillcontact from "../../pages/skillcontact/skillcontact";
+import OurFounder from "../../pages/skillcontact/OurFounder";
 import Testimonies from "../../pages/testimonies/Testimonies";
 import Front from "../../pages/front/Front";
 
@@ -13,7 +13,6 @@ const Hero = () => {
   return (
     <div className={styles.gridcontainer}>
       <Header />
-      
       {/* This wrapper will contain both Front and Outlet content */}
       <div className={styles.contentArea}>
         <Front />
@@ -21,10 +20,9 @@ const Hero = () => {
           <Outlet /> {/* This will render the route components below Front */}
         </div>
       </div>
-      
       <Staticblog />
       <Contactmail />
-      <Skillcontact />
+      <OurFounder />
       <Testimonies />
       <Footer />
     </div>

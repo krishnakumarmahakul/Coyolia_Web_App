@@ -133,28 +133,28 @@ const Header = () => {
           {/* this is for the solution */}
           <li className={styles.navItem}>
             <NavLink 
-              to="/about" 
+              to="/solution" 
               className={({ isActive }) => isActive ? styles.active : styles.navLink}
-              onClick={() => handleNavigation("/about")}
+              onClick={() => handleNavigation("/solution")}
             >
               Solutions
             </NavLink>
             <div className={styles.dropdown}>
               <Link 
-                to="/important/privacypolicy" 
-                onClick={() => handleNavigation("/important/privacypolicy")}
+                to="/solution/ailearning" 
+                onClick={() => handleNavigation("/solution/ailearning")}
               >
                 Ai Learning & Developments 
               </Link>
               <Link 
-                to="/important/termcondition" 
-                onClick={() => handleNavigation("/important/termcondition")}
+                to="/solution/aitalent" 
+                onClick={() => handleNavigation("/solution/aitalent")}
               >
                 Ai in talent acquision and hr
               </Link>
               <Link 
-                to="/important/refund" 
-                onClick={() => handleNavigation("/important/refund")}
+                to="/solution/innovation" 
+                onClick={() => handleNavigation("/solution/innovation")}
               >
                 Innovations and research  
               </Link>

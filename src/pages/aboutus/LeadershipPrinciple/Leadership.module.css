@@ -1,0 +1,128 @@
+.leadershipContainer {
+    padding: 4rem 2rem;
+    min-height: 90vh;
+    overflow: hidden; /* Prevent container overflow */
+  }
+  
+  .teamGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto 4rem;
+    /* Scrollable container */
+    max-height: 60vh;
+    overflow-y: auto;
+    /* Hide scrollbar */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+  }
+  
+  .teamGrid::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+  }
+  
+  .profileCard {
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+    /* Scrollable content */
+    max-height: 300px;
+    overflow-y: auto;
+    /* Hide scrollbar */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  .profileCard::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .profileCard:hover {
+    transform: translateY(-5px);
+  }
+  
+  .valuesSection {
+    padding: 3rem 2rem;
+    border-radius: 8px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    /* Scrollable content */
+    max-height: 40vh;
+    overflow-y: auto;
+    /* Hide scrollbar */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  .valuesSection::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Keep all other existing styles exactly the same below */
+  .header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .subtitle {
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+  .avatar {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .title {
+    font-style: italic;
+    margin: 0.5rem 0 1rem;
+  }
+  
+  .bio {
+    line-height: 1.7;
+    margin-top: 1rem;
+  }
+  
+  .valuesSection h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+  
+  .principlesList {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  .principlesList li {
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+    padding-left: 2rem;
+    position: relative;
+    line-height: 1.6;
+  }
+  
+  .principlesList li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    width: 1rem;
+    height: 1rem;
+    background-color: #edf2f4;
+    border-radius: 50%;
+  }

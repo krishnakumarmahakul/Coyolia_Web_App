@@ -4,23 +4,26 @@ import { Outlet, useLocation } from 'react-router-dom';
 
 function AboutUs() {
   const location = useLocation();
-  const isBaseRoute = location.pathname === '/about';
+  const showMainContent = location.pathname === '/' || location.pathname === '/about';
   
   return (
     <div className={styles.container}>
       <div className={styles.mainContent}>
-        {isBaseRoute && (
+        {showMainContent && (
           <>
+            {/* Vision Section */}
             <section className={styles.section}>
               <div className={styles.badge}>Vision</div>
               <article className={styles.text}>
-                At Coyolia Technologies, our vision is to create a world of abundant opportunities for youth by leveraging the power of the Digital Public
+                At Coyolia Technologies, our vision is to create a world of abundant 
+                opportunities for youth by leveraging the power of the Digital Public
                 Goods Alliance. We aim to harness Indian and open-source IP to tackle
                 global challenges, reduce corruption, and empower communities
                 worldwide.
               </article>
             </section>
 
+            {/* Mission Section */}
             <section className={styles.section}>
               <div className={styles.badge}>Mission</div>
               <article className={styles.text}>
@@ -34,6 +37,7 @@ function AboutUs() {
               </article>
             </section>
 
+            {/* Values Section */}
             <section className={styles.section}>
               <div className={styles.badge}>Values</div>
               <article className={styles.text}>
@@ -45,8 +49,10 @@ function AboutUs() {
           </>
         )}
         
-        {/* This will render nested route content (Leadership, OurCulture, OurTeam) */}
-        <Outlet />
+        {/* Nested Route Content */}
+        <div className={styles.nestedContent}>
+          <Outlet />
+        </div>
       </div>
     </div>
   );
