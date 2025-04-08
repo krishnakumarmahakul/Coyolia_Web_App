@@ -1,0 +1,103 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    background-color: #21204c;
+    padding: 4rem 2rem;
+    flex-wrap: wrap;
+    min-height: 80vh;
+}
+
+.card {
+    background: linear-gradient(145deg, #2e2b5f, #3a3780);
+    color: white;
+    border-radius: 1.5rem;
+    padding: 2.5rem 2rem;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    height: 90%;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+    transform: rotate(30deg);
+    transition: all 0.6s ease;
+}
+
+.card:hover::before {
+    transform: rotate(30deg) translate(20px, 20px);
+}
+
+.image-container {
+    position: relative;
+    margin: 0 auto 1.8rem;
+    width: fit-content;
+}
+
+.image {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease;
+}
+
+.card:hover .image {
+    border-color: rgba(218, 165, 32, 0.4);
+    transform: scale(1.05);
+}
+
+.name {
+    font-size: 1.6rem;
+    margin-bottom: 0.6rem;
+    font-weight: 700;
+    color: goldenrod;
+    letter-spacing: 0.5px;
+}
+
+.title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #d8b9ff;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+.title::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, goldenrod, transparent);
+}
+
+.description {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #e0e0ff;
+    opacity: 0.9;
+    margin-bottom: 1rem;
+}

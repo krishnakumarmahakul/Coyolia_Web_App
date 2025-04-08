@@ -76,8 +76,10 @@ const Header = () => {
             </NavLink>
             <div className={styles.dropdown}>
               <Link 
-                to="/services/careercouncelling" 
-                onClick={() => handleNavigation("/services/careercouncelling")}
+                // to="/services/careercouncelling" 
+                // onClick={() => handleNavigation("/services/careercouncelling")}
+                to="/app" 
+                onClick={() => handleNavigation("/app")}
               >
                 Career Councelling
               </Link>

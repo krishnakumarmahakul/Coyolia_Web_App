@@ -20,8 +20,11 @@ import Innovation from './pages/Solutions/Innovation and research/Innovation'
 
 const PageRouter = () => {
   return (
+    <>
     <Routes>
-      <Route path="/app" element={<App />} />
+      <Route path="/app" element={<App />} >
+      <Route path="careercouncelling" element={<Careercouncelling/>} />
+      </Route>
       <Route path="/" element={<Hero />}>
         {/* this is the about us */}
         <Route index element={<About />} />
@@ -32,7 +35,7 @@ const PageRouter = () => {
         </Route>
         {/* this is the service page */}
         <Route path="services" element={<Services />} >
-          <Route path="careercouncelling" element={<Careercouncelling/>} />
+          
         </Route>
         <Route path="ambarglow" element={<AmbarGlow />} />
         {/* this is the important section */}
@@ -52,6 +55,7 @@ const PageRouter = () => {
         </Route>
       </Route>
     </Routes>
+    </>
   );
 };
 
