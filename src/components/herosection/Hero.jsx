@@ -8,6 +8,7 @@ import Contactmail from "../../pages/contactmail/contactmail";
 import OurFounder from "../../pages/skillcontact/OurFounder";
 import Testimonies from "../../pages/testimonies/Testimonies";
 import Front from "../../pages/front/Front";
+import FloatingContactButton from "../FloatingContactButton/FloatingContactButton";
 
 const Hero = () => {
   return (
@@ -25,6 +26,7 @@ const Hero = () => {
       <OurFounder />
       <Testimonies />
       <Footer />
+      <FloatingContactButton/>
     </div>
   );
 };

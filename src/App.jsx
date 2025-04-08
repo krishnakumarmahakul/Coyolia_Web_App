@@ -3,6 +3,7 @@ import styles from "./App.module.css";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import { Outlet } from "react-router-dom";
+import FloatingContactButton from "./components/FloatingContactButton/FloatingContactButton";
 
 const App = () => {
   const handleBookSession = () => {
@@ -16,7 +17,6 @@ const App = () => {
         <div className={styles.contentSection}>
           <h1 className={styles.title}>Transform Your Career Path</h1>
           <h2 className={styles.subtitle}>Professional Career Counseling Sessions</h2>
-          
           <div className={styles.benefitsList}>
             <div className={styles.benefitItem}>
               <div className={styles.benefitIcon}>✓</div>
@@ -65,6 +65,7 @@ const App = () => {
         </div>
       </div>
       <Footer />
+      <FloatingContactButton/>
     </>
   );
 };
