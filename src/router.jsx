@@ -17,13 +17,15 @@ import Solution from "./pages/Solutions/Solution";
 import Ailearning from './pages/Solutions/Ai Learning & Development/Ailearning'
 import Aitalent from './pages/Solutions/Ai talent acquisition & hr/Aitalent'
 import Innovation from './pages/Solutions/Innovation and research/Innovation'
+import FreeSession from "./pages/services/FreeSession/FreeSession";
 
 const PageRouter = () => {
   return (
     <>
     <Routes>
       <Route path="/app" element={<App />} >
-      <Route path="careercouncelling" element={<Careercouncelling/>} />
+        <Route path="careercouncelling" element={<Careercouncelling/>} />
+        <Route path="freesession" element={<FreeSession/>} />
       </Route>
       <Route path="/" element={<Hero />}>
         {/* this is the about us */}

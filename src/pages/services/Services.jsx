@@ -1,9 +1,10 @@
 import React from 'react';
 import styles from './Services.module.css';
-import { Outlet, useLocation } from 'react-router-dom';
+import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 
 const Services = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const isBaseRoute = location.pathname === '/services';
   
   const services = [
@@ -16,10 +17,14 @@ const Services = () => {
       description: "Specific, domain-based head hunting and different financial models for staff augmentation."
     },
     {
-      title: "Consulting Services",
+      title: "Career Counseling",
       description: "Niche, affordable and short term assignments on making your IT Department future ready."
     }
   ];
+
+  const handleNavigateToCounseling = () => {
+    navigate('/app');
+  };
 
   return (
     <div className={styles.servicesContainer}>
@@ -31,13 +36,19 @@ const Services = () => {
               <div key={index} className={styles.serviceCard}>
                 <h3 className={styles.serviceTitle}>{service.title}</h3>
                 <p className={styles.serviceDescription}>{service.description}</p>
+                {service.title === "Career Counseling" && (
+                  <button 
+                    className={styles.counselingButton}
+                    onClick={handleNavigateToCounseling}
+                  >
+                    Book a Session
+                  </button>
+                )}
               </div>
             ))}
           </div>
         </>
       )}
-      
-      {/* This will render nested route content if any exists */}
       <Outlet />
     </div>
   );

@@ -1,27 +1,26 @@
 .formContainer {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 2rem auto;
     padding: 2rem;
-    background: white;
+    background-color: white;
     border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
   
-  .formContainer h2 {
+  .formTitle {
     color: #21204c;
     text-align: center;
     margin-bottom: 2rem;
   }
   
-  .formRow {
-    display: flex;
+  .sessionForm {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
-    margin-bottom: 1.5rem;
   }
   
   .formGroup {
-    flex: 1;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
   
   .formGroup label {
@@ -41,7 +40,7 @@
     font-size: 1rem;
   }
   
-  .dateInput {
+  .datePicker {
     width: 100%;
     padding: 12px;
     border: 1px solid #ddd;
@@ -49,40 +48,32 @@
     font-size: 1rem;
   }
   
-  .formActions {
-    display: flex;
-    justify-content: flex-end;
-    gap: 1rem;
-    margin-top: 2rem;
-  }
-  
-  .cancelButton {
-    background: white;
-    color: #21204c;
-    border: 1px solid #ddd;
-    padding: 12px 24px;
-    border-radius: 6px;
-    cursor: pointer;
-  }
-  
   .submitButton {
+    grid-column: 1 / -1;
     background-color: goldenrod;
     color: #21204c;
     border: none;
-    padding: 12px 24px;
+    padding: 14px;
     border-radius: 6px;
+    font-size: 1.1rem;
     font-weight: 600;
     cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
   }
   
-  /* Responsive styles */
+  .submitButton:hover {
+    background-color: #ffd700;
+  }
+  
+  /* Responsive adjustments */
   @media (max-width: 768px) {
-    .formRow {
-      flex-direction: column;
-      gap: 0;
-    }
-    
     .formContainer {
       padding: 1.5rem;
+      margin: 1rem;
+    }
+    
+    .sessionForm {
+      grid-template-columns: 1fr;
     }
   }

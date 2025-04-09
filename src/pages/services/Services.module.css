@@ -61,3 +61,29 @@
         grid-template-columns: 1fr;
     }
 }
+.counselingButton {
+    background: linear-gradient(135deg, goldenrod, #ffd700);
+    color: #21204c;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(218, 165, 32, 0.3);
+    display: inline-block;
+  }
+  
+  .counselingButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(218, 165, 32, 0.4);
+    background: linear-gradient(135deg, #ffd700, goldenrod);
+  }
+  
+  @media (max-width: 768px) {
+    .counselingButton {
+      width: 100%;
+      padding: 14px;
+    }
+  }

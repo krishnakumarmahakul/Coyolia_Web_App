@@ -1,6 +1,9 @@
 import React from 'react'
 import styles from './Front.module.css'
+import { useNavigate } from 'react-router-dom';
+
 function Front() {
+  const navigate = useNavigate(); 
   return (
     <>
       <div className={styles.container}>
@@ -20,7 +23,10 @@ function Front() {
                 </p>
                 </div>
               <div className={styles.ten}>
-                <button className={styles.btn}> Explore services <div>&#8594;</div></button>
+                <button className={styles.btn} onClick={()=>{
+                  navigate("/app")
+                }}
+                > Explore services <div>&#8594;</div></button>
               </div>
               
         </div>
