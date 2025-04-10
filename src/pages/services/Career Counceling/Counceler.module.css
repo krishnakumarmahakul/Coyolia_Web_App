@@ -1,0 +1,225 @@
+.container {
+    min-height: 95vh;
+    padding: 2rem;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  /* Login Styles */
+  .loginContainer {
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  .loginContainer h2 {
+    text-align: center;
+    color: #21204c;
+    margin-bottom: 1.5rem;
+  }
+  
+  .formGroup {
+    margin-bottom: 1.5rem;
+  }
+  
+  .formGroup label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #2e2b5f;
+    font-weight: 500;
+  }
+  
+  .formGroup input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .loginButton {
+    background-color: #21204c;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .loginButton:hover {
+    background-color: #2e2b5f;
+  }
+  
+  .error {
+    color: #ff4d4f;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  /* Dashboard Styles */
+  .dashboard {
+    width: 100%;
+  }
+  
+  .dashboardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .dashboardHeader h2 {
+    color: #21204c;
+  }
+  
+  .logoutButton {
+    background-color: #ff4d4f;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .dashboardContent {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .statsCard {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .statsCard h3 {
+    color: #21204c;
+    margin-bottom: 0.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      padding: 1rem;
+    }
+    
+    .dashboardContent {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* extra  */
+  /* Notification Bar */
+.notificationBar {
+  background-color: #fff8e6;
+  color: #21204c;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 500;
+  border-left: 4px solid #ffc107;
+}
+
+/* Session List */
+.sessionList {
+  margin-top: 1rem;
+}
+.sessionItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(33, 32, 76, 0.1);
+}
+.sessionItem div {
+  display: flex;
+  flex-direction: column;
+}
+.sessionItem span {
+  font-size: 0.85rem;
+  color: #5a5a7a;
+}
+
+/* Buttons */
+.reportButton {
+  background-color: #21204c;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.3s;
+}
+.reportButton:hover {
+  background-color: #3a3780;
+}
+
+.smallButton {
+  background-color: #21204c;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  margin-left: 10px;
+}
+.smallButtonAlt {
+  background-color: #edf2f4;
+  color: #21204c;
+  border: 1px solid #21204c;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+/* Notification List */
+.notificationList {
+  margin-top: 1rem;
+}
+.notificationItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+/* Table Styles */
+.sessionsTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+.sessionsTable th, .sessionsTable td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid rgba(33, 32, 76, 0.1);
+}
+.sessionsTable th {
+  background-color: #f8f9fa;
+  color: #21204c;
+  font-weight: 600;
+}
+.completed {
+  color: #4caf50;
+  font-weight: 500;
+}
+.pending {
+  color: #ff9800;
+  font-weight: 500;
+}
+
+/* Full-width card */
+.fullWidth {
+  grid-column: 1 / -1;
+}

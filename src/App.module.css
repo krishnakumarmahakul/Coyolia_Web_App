@@ -162,7 +162,7 @@
   background-color: #21204c;
   width: 60%;
   padding-left: 6rem;
-  padding-top: 6rem;
+  padding-top: 3rem;
   border-radius: 20px;
 }
 
@@ -420,3 +420,27 @@
   color: goldenrod;
 }
 
+/* counceller login buton */
+/* Counselor Login Button Styles */
+.counselorLoginButton {
+  background-color: #2e2b5f;
+  color: white;
+  border: 2px solid goldenrod;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 2rem;
+  margin-left: 13rem;
+  display: block;
+  width: 100%;
+  max-width: 40%;
+ 
+  text-align: center;
+}
+
+.counselorLoginButton:hover {
+  background-color: goldenrod;
+  color: #21204c;
+}

@@ -116,8 +116,15 @@ const handleBlur = (e) => {
                 job searches, and professional development with proven strategies that work.
               </p>
             </div>
+            {/* this is the section for the counceller loggin and  */}
             
             <div className={styles.actionSection}>
+            <button
+            onClick={() => {navigate('/counceler')}}
+              className={styles.counselorLoginButton}
+            >
+              Counselor Login
+            </button>
               <div className={styles.sessionCard}>
                 <h3 className={styles.sessionTitle}>Ready to take the next step?</h3>
                 <p className={styles.sessionDesc}>Book a 1-on-1 session with our career experts</p>
