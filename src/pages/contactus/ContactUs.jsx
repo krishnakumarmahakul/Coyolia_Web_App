@@ -1,34 +1,83 @@
-import React from 'react'
-import styles from './ContactUs.module.css'
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+import styles from './ContactUs.module.css';
 
-function ContactUs() {
+export const ContactUs = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
+        'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+        form.current,
+        {
+          publicKey: 'YOUR_PUBLIC_KEY', // Replace with your EmailJS public key
+        }
+      )
+      .then(
+        () => {
+          console.log('SUCCESS!');
+          alert('Message sent successfully!');
+          form.current.reset();
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+          alert('Failed to send message. Please try again.');
+        }
+      );
+  };
+
   return (
     <div className={styles.content}>
-                <div className={styles.title}>
-                    <h2>
-                        Start Your Skill Development Journey with Us!
-                    </h2>
-                    <p>Let's get started.</p>
-                </div>
-                <div className={styles.forms}>
-                    <form>
-                        <label htmlFor="firstname">First Name</label>
-                        <input id='firstname' name='firstname' type="text" placeholder="Enter your first name" />
+      <div className={styles.title}>
+        <h2>Start Your Skill Development Journey with Us!</h2>
+        <p>Let's get started.</p>
+      </div>
+      <div className={styles.forms}>
+        <form ref={form} onSubmit={sendEmail}>
+          <label htmlFor="user_name">First Name</label>
+          <input 
+            id="user_name" 
+            name="user_name" 
+            type="text" 
+            placeholder="Enter your first name" 
+            required
+          />
 
-                        <label htmlFor="lastname">Last Name</label>
-                        <input id='lastname' name='lastname' type="text" placeholder="Enter your last name" />
+          <label htmlFor="user_email">E-mail</label>
+          <input 
+            id="user_email" 
+            name="user_email" 
+            type="email" 
+            placeholder="Enter your email address" 
+            required
+          />
 
-                        <label htmlFor="email">E-mail</label>
-                        <input id='email' name='email' type="email" placeholder="Enter your email address" />
+          <label htmlFor="user_phone">Phone Number</label>
+          <input 
+            id="user_phone" 
+            name="user_phone" 
+            type="tel" 
+            placeholder="Enter your phone number" 
+          />
 
-                        <label htmlFor="phonenumber">Phone Number</label>
-                        <input id='phonenumber' name='phonenumber' type="tel" placeholder="Enter your phone number" />
+          <label htmlFor="message">Message</label>
+          <textarea 
+            id="message" 
+            name="message" 
+            placeholder="Enter your message"
+            rows="4"
+            required
+          />
 
-                        <button type="submit">Submit</button>
-                    </form>
-                </div>
-            </div>
-  )
-}
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  );
+};
 
-export default ContactUs
+export default ContactUs;

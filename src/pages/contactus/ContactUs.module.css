@@ -137,3 +137,27 @@
         margin-bottom: 2rem;
     }
 }
+
+/* Add this after all your existing styles */
+.forms textarea {
+    width: 100%;
+    border: 1px solid #e0e0e6;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    background-color: #f9f9fb;
+    font-family: inherit;
+    resize: vertical;
+
+}
+
+.forms textarea:focus {
+    outline: none;
+    border-color: #21204c;
+    box-shadow: 0 0 0 3px rgba(33, 32, 76, 0.1);
+    background-color: white;
+}
+
+.forms textarea:hover {
+    border-color: #b8b8c5;
+}

@@ -42,11 +42,11 @@ function Contactmail() {
         <p className={styles.emailPrompt}>Drop in your email for Event Updates</p>
         
         <div className={styles.formGroup}>
-          <label htmlFor="firstName" className={styles.label}>First name*</label>
+          <label htmlFor="Name" className={styles.label}>First name*</label>
           <input
             type="text"
-            id="firstName"
-            name="firstName"
+            id="Name"
+            name="Name"
             value={formData.firstName}
             onChange={handleChange}
             className={styles.input}
